@@ -2,20 +2,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char *argv[])
+void printstar()
 {
-  int i;
-  int max = 45;
-  
-  srand( (unsigned)time(NULL) );
-  
-  for (i = 1; i < 6; i++)
-  {
-      int randum = rand();
-      printf(" %d(%d) ", randum % max, randum);
-  }
+     int i;
 
+     for (i = 0; i < 10; i++)
+         printf("*");
+}
 
+int main(void)
+{
+    printstar();
+    printstar();
+    printstar();
+    
   system("PAUSE");	
   return 0;
 }
