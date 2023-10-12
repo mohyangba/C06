@@ -3,12 +3,21 @@
 
 
 int factorial(int n) {
+        
+    if(n==0||n==1){
+    return 1;// 1! & 0!
+    }
+    else if (n<0){
+    return 0; //means error
+    }
+    else{
     int i;
-    int result = 1;
+    int result = 1; // initializing 'result' variable to 1
     for (i = 1; i <= n; i++) {
         result = result * i;
     }
     return result;
+    }
 }
 
 int combination(int n, int r)
@@ -21,32 +30,24 @@ int combination(int n, int r)
     return (div1/div2);
 }
 
-int main(int argc, char *argv()){
+int main(){
+
     int n, r;
-    int div1, div2;
     int result;
     
-
-    // 1. 입력값
-    
-        // n입력
-    printf("input n: \n");
+    // 1. input n, r
+    printf("input n: ");
     scanf("%d", &n);
     
-        // r입력
-    printf("input r: \n");
+    printf("input r: ");
     scanf("%d", &r);
     
-    // 2. 분모/분자 계산
+    // 2. calculate div1 & div2
     result = combination(n,r);
-       // n! n-r! r! 계산
-       // 분모 / 분자 계산
      
-    // 3. 최종 값 출력
-    printf("the combination of %d and %d will be : %.21f", n, r, result);
-     // 분모/분자 나눔
-       // 결과 값 출력  
-     
+    // 3. print the reult
+    printf("the combination of %d and %d will be : %d\n", n, r, result);
+
   system("PAUSE");	
   return 0;
 } 
