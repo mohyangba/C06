@@ -4,6 +4,7 @@
 void square1(int a)
 {
      a= a*a;
+          printf("test number: %i\n\n", a);
 }
 
 int square2(int b)
