@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printstar()
+void f1(void)
 {
-     int i;
-
-     for (i = 0; i < 10; i++)
-         printf("*");
+     int x;
+     printf("f1 x is at %p\n", &x);
+     //&x x가 어느 메모리의 주소에 있는지 알려주는 연산자. = 변수의 메모리 주소지  
 }
 
-int main(void)
-{
-    printstar();
-    printstar();
-    printstar();
+int main(void){
     
+    int x;
+    printf("main x is at %p\n", &x);
+    f1();
+
   system("PAUSE");	
   return 0;
 }
