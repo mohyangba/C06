@@ -1,52 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sumTwo(int a, int b)
+void square1(int a)
 {
-     int sum = a + b;
-     return sum;
-     //return(a+b)로 해도 가능. 
+     a= a*a;
 }
 
-int square(int n)
+int square2(int b)
 {
-    int squared = n*n;
-    return squared;
-    // return n*n 가능. 
+    return b*b;
 }
 
-int get_max(int x, int y)
-{
-    int max;
+int main(){
     
-    if(x<y)
-           max = y;
-    if(x>y)
-           max = x;
-    else
-        max = x = y;
-        
-    return max;
-}
+    int a=2;
+    square1(a); 
     
-int main(int argc, char *argv()){
+    printf("a=%i\n", a);
+                     // void 의 값은 행동이 동작한 후 날라가므로 당연히 a는 2라고 나오게 된다 
     
-    int a, b;
-    a=3;
-    b=9;
-    sumTwo(3, 9);
-    printf("sunTwo result will be %i\n", sumTwo(3,9));
+    int b=5;
+    b = square2(b);
+    printf("b=%i\n", b);
     
-    square(8);
-    printf("square result will be %i\n", square(8));
-    
-    int x, y; 
-    x=11;
-    y=11;
-    
-    get_max(11, 11);
-    printf("two integers will be %d and %d, so the max value will be %d.\n", x, y, get_max(11,11));
-
   system("PAUSE");	
   return 0;
 } 
