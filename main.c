@@ -29,18 +29,24 @@ int combination(int n, int r)
     
     return (div1/div2);
 }
-
+// printf scanf ¸ğµâÈ­ 
+int input(int norr)
+{ 
+    int num;
+    
+     printf("input an integer: ");
+     scanf("%d", &num);
+     
+     return num;
+}
 int main(){
 
     int n, r;
     int result;
     
     // 1. input n, r
-    printf("input n: ");
-    scanf("%d", &n);
-    
-    printf("input r: ");
-    scanf("%d", &r);
+    n=input(n);
+    r=input(n);
     
     // 2. calculate div1 & div2
     result = combination(n,r);
